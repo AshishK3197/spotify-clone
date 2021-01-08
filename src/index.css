@@ -15,3 +15,7 @@ code {
 * {
 	margin: 0;
 }
+/* Hide the scrollbar but keep the functionality consistent*/
+body::-webkit-scrollbar {
+	display: none;
+}
