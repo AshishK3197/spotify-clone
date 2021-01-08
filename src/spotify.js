@@ -14,6 +14,7 @@ const scopes = [
 ];
 
 export const getTokenFromUrl = () => {
+	// window.location.hash goes to the url and fetches the data after the hash in the url
 	return window.location.hash
 		.substring(1)
 		.split("&")
