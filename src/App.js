@@ -40,11 +40,18 @@ function App() {
 					user: user,
 				});
 			});
-
+			// Playlists in the side bar
 			spotify.getUserPlaylists().then((playlists) => {
 				dispatch({
 					type: "SET_PLAYLISTS",
 					playlists: playlists,
+				});
+			});
+			// Feed in the discover weekly playlist id
+			spotify.getPlaylist("37i9dQZEVXcXuZ9EuzcpjT").then((response) => {
+				dispatch({
+					type: "SET_DISCOVER_WEEKLY",
+					discover_weekly: response,
 				});
 			});
 		}
